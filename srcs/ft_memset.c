@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 23:20:24 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/16 04:06:52 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/04/16 18:48:13 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*str;
-	size_t i;
+	size_t 			i;
 
 	str = (unsigned char *)b;
 	i = -1;

@@ -6,12 +6,13 @@
 #    By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/14 23:11:43 by cmaginot          #+#    #+#              #
-#    Updated: 2021/04/16 03:11:17 by cmaginot         ###   ########.fr        #
+#    Updated: 2021/04/17 03:48:58 by cmaginot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 TARGET=libft.a
-SRC=$(addprefix ${FOLDER}/, ft_memset.c ft_bzero.c ft_atoi.c)
+SRC=$(addprefix ${FOLDER}/, ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
+							ft_atoi.c)
 OBJS=${SRC:.c=.o}
 
 HEADER=includes

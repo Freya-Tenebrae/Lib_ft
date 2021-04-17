@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 17:50:48 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/16 04:55:53 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/04/17 04:07:40 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,19 @@
 
 int	test_memset()
 {
-	int		**arrayref;
-	int		**arrayres;
-	char	**charref;
-	char	**charres;
-	const size_t sizearray[] = {0, sizeof(int) * 3, sizeof(int) * 3,
+	int				**arrayref;
+	int				**arrayres;
+	char			**charref;
+	char			**charres;
+	const size_t	sizearray[] = {0, sizeof(int) * 3, sizeof(int) * 3,
 								sizeof(int) * 5, sizeof(int) * 5};
-	const size_t sizechar[] = {0, sizeof(char) * 7, sizeof(char) * 7,
+	const size_t	sizechar[] = {0, sizeof(char) * 7, sizeof(char) * 7,
 							sizeof(char) * 17, sizeof(char) * 17};
-	int		rep[] = {0, 0, 7, 0, 48};
-	int		length;
-	int		correct;
-	int		error;
-	int		i;
+	int				rep[] = {0, 0, 7, 0, 48};
+	int				length;
+	int				correct;
+	int				error;
+	int				i;
 
 	if (!(arrayref = malloc(sizeof(int *) * 5)))
 		return (-1);
@@ -90,7 +90,6 @@ int	test_memset()
 		charres[i] = strdup("Ceci est un Test");
 	}
 	i = -1;
-	error = 0;
 	while (++i < 5)
 	{
 		memset(charref[i], rep[i], sizechar[i]);
@@ -109,18 +108,18 @@ int	test_memset()
 
 int	test_bzero()
 {
-	int		**arrayref;
-	int		**arrayres;
-	char	**charref;
-	char	**charres;
-	const size_t sizearray[] = {0, sizeof(int) * 3, sizeof(int) * 3,
+	int				**arrayref;
+	int				**arrayres;
+	char			**charref;
+	char			**charres;
+	const size_t	sizearray[] = {0, sizeof(int) * 3, sizeof(int) * 3,
 								sizeof(int) * 5, sizeof(int) * 5};
-	const size_t sizechar[] = {0, sizeof(char), sizeof(char) * 7,
+	const size_t	sizechar[] = {0, sizeof(char), sizeof(char) * 7,
 							sizeof(char) * 17, sizeof(char) * 17};
-	int		length;
-	int		correct;
-	int		error;
-	int		i;
+	int				length;
+	int				correct;
+	int				error;
+	int				i;
 
 	if (!(arrayref = malloc(sizeof(int *) * 5)))
 		return (-1);
@@ -180,11 +179,178 @@ int	test_bzero()
 		charres[i] = strdup("Ceci est un Test");
 	}
 	i = -1;
-	error = 0;
 	while (++i < 5)
 	{
 		bzero(charref[i], sizechar[i]);
 		ft_bzero(charres[i], sizechar[i]);
+		if (strcmp(charres[i], charref[i]) != 0)
+		{
+			printf("test %i KO : result by ft_bzero = %s | expected %s\n",
+				i + 5, charres[i], charref[i]);
+			error++;
+		}
+		else
+			printf("test %i OK\n", i + 5);
+	}
+	return (error);
+}
+
+int	test_memcpy()
+{
+	const int		arraysrc[5] = {54, 85, 20, 63, 21};
+	int				**arrayref;
+	int				**arrayres;
+	const char		charsrc[17] = {"Ceci est un Test"};
+	char			**charref;
+	char			**charres;
+	const size_t 	sizearray[] = {0, sizeof(int) * 3, sizeof(int) * 3,
+								sizeof(int) * 5, sizeof(int) * 5};
+	const size_t 	sizechar[] = {0, sizeof(char), sizeof(char) * 7,
+							sizeof(char) * 17, sizeof(char) * 17};
+	int				length;
+	int				correct;
+	int				error;
+	int				i;
+
+	if (!(arrayref = malloc(sizeof(int *) * 5)))
+		return (-1);
+	if (!(arrayres = malloc(sizeof(int *) * 5)))
+		return (-1);
+	i = -1;
+	while (++i < 5)
+	{
+		if (!(arrayref[i] = malloc(sizeof(int) * sizearray[i])))
+			return (-1);
+		if (!(arrayres[i] = malloc(sizeof(int) * sizearray[i])))
+			return (-1);
+	}
+	i = -1;
+	error = 0;
+	while (++i < 5)
+	{
+		memcpy(arrayref[i], arraysrc, sizearray[i]);
+		ft_memcpy(arrayres[i], arraysrc, sizearray[i]);
+		length = -1;
+		correct = 0;
+		while (++length < 5)
+			if (arrayres[i][length] != arrayref[i][length])
+				correct = 1;
+		if (correct != 0)
+		{
+			printf("test %i KO : result by ft_bzero = ", i);
+			while (++length < 10)
+				printf("%d ", arrayres[i][length - 5]);
+			printf(" | expected ");
+			while (++length < 15)
+				printf("%d ", arrayref[i][length - 10]);
+			printf("\n");
+			error++;
+		}
+		else
+			printf("test %i OK\n", i);
+	}
+	if (!(charref = malloc(sizeof(char *) * 5)))
+		return (-1);
+	if (!(charres = malloc(sizeof(char *) * 5)))
+		return (-1);
+	i = -1;
+	while (++i < 5)
+	{
+		if (!(charref[i] = malloc(sizeof(char *) * sizechar[i])))
+			return (-1);
+		if (!(charres[i] = malloc(sizeof(char *) * sizechar[i])))
+			return (-1);
+	}
+	i = -1;
+	while (++i < 5)
+	{
+		memcpy(charref[i], charsrc, sizechar[i]);
+		ft_memcpy(charres[i], charsrc, sizechar[i]);
+		if (strcmp(charres[i], charref[i]) != 0)
+		{
+			printf("test %i KO : result by ft_bzero = %s | expected %s\n",
+				i + 5, charres[i], charref[i]);
+			error++;
+		}
+		else
+			printf("test %i OK\n", i + 5);
+	}
+	return (error);
+}
+
+int	test_memccpy()
+{
+	const int		arraysrc[5] = {54, 85, 20, 63, 21};
+	int				**arrayref;
+	int				**arrayres;
+	const char		charsrc[17] = {"Ceci est un Test"};
+	char			**charref;
+	char			**charres;
+	const size_t 	sizearray[] = {0, sizeof(int) * 3, sizeof(int) * 3,
+								sizeof(int) * 5, sizeof(int) * 5};
+	const size_t 	sizechar[] = {0, sizeof(char), sizeof(char) * 7,
+							sizeof(char) * 17, sizeof(char) * 17};
+	const int		breakarray[] = {1, 'i', 'y', 's', 'z'};
+	const int		breakchar[] = {1, 'i', 'y', 's', 'z'};
+	int				length;
+	int				correct;
+	int				error;
+	int				i;
+
+	if (!(arrayref = malloc(sizeof(int *) * 5)))
+		return (-1);
+	if (!(arrayres = malloc(sizeof(int *) * 5)))
+		return (-1);
+	i = -1;
+	while (++i < 5)
+	{
+		if (!(arrayref[i] = malloc(sizeof(int) * sizearray[i])))
+			return (-1);
+		if (!(arrayres[i] = malloc(sizeof(int) * sizearray[i])))
+			return (-1);
+	}
+	i = -1;
+	error = 0;
+	while (++i < 5)
+	{
+		memccpy(arrayref[i], arraysrc, breakarray[i], sizearray[i]);
+		ft_memccpy(arrayres[i], arraysrc, breakarray[i], sizearray[i]);
+		length = -1;
+		correct = 0;
+		while (++length < 5)
+			if (arrayres[i][length] != arrayref[i][length])
+				correct = 1;
+		if (correct != 0)
+		{
+			printf("test %i KO : result by ft_bzero = ", i);
+			while (++length < 10)
+				printf("%d ", arrayres[i][length - 5]);
+			printf(" | expected ");
+			while (++length < 15)
+				printf("%d ", arrayref[i][length - 10]);
+			printf("\n");
+			error++;
+		}
+		else
+			printf("test %i OK\n", i);
+	}
+	if (!(charref = malloc(sizeof(char *) * 5)))
+		return (-1);
+	if (!(charres = malloc(sizeof(char *) * 5)))
+		return (-1);
+	i = -1;
+	while (++i < 5)
+	{
+		if (!(charref[i] = malloc(sizeof(char *) * sizechar[i])))
+			return (-1);
+		if (!(charres[i] = malloc(sizeof(char *) * sizechar[i])))
+			return (-1);
+	}
+	i = -1;
+	while (++i < 5)
+	{
+		memccpy(charref[i], charsrc, breakchar[i], sizechar[i]);
+		ft_memccpy(charres[i], charsrc, breakchar[i], sizechar[i]);
 		if (strcmp(charres[i], charref[i]) != 0)
 		{
 			printf("test %i KO : result by ft_bzero = %s | expected %s\n",
@@ -245,17 +411,17 @@ int	main()
 	else
 		printf("ft_bzero.c KO : %i error\nscore = %i \\ 35\n", res, score);
 	printf("-------------------------- TEST ft_memcpy.c -------------------\n");
-	/*res = test_memcpy();
+	res = test_memcpy();
 	if (res == 0)
 		printf("ft_memcpy.c OK\nscore = %i \\ 35\n", ++score);
 	else
-		printf("ft_memcpy.c KO : %i error\nscore = %i \\ 35\n", res, score);*/
+		printf("ft_memcpy.c KO : %i error\nscore = %i \\ 35\n", res, score);
 	printf("-------------------------- TEST ft_memccpy.c ------------------\n");
-	/*res = test_memccpy();
+	res = test_memccpy();
 	if (res == 0)
 		printf("ft_memccpy.c OK\nscore = %i \\ 35\n", ++score);
 	else
-		printf("ft_memccpy.c KO : %i error\nscore = %i \\ 35\n", res, score);*/
+		printf("ft_memccpy.c KO : %i error\nscore = %i \\ 35\n", res, score);
 	printf("-------------------------- TEST ft_memmove.c ------------------\n");
 	/*res = test_memmove();
 	if (res == 0)
