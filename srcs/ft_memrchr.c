@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/14 23:20:24 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/17 22:02:22 by cmaginot         ###   ########.fr       */
+/*   Created: 2021/04/17 17:39:29 by cmaginot          #+#    #+#             */
+/*   Updated: 2021/04/17 23:03:56 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+void	*ft_memrchr(const void *s, int c, size_t n)
 {
-	unsigned int j;
-	unsigned int i;
+	unsigned char	*str;
+	size_t 			i;
 
+	str = (unsigned char *)s;
 	i = -1;
-	if (needle[0] == '\0')
-		return ((char *)haystack);
-	while (haystack[++i] != '\0' && i < len)
-	{
-		j = 0;
-		while (needle[j] == haystack[i + j] && haystack[i + j] != '\0' &&
-			i + j < len)
-			if (needle[++j] == '\0')
-				return ((char *)haystack + i);
-	}
+	while (++i < n)
+		if(str[n - i - 1] == (unsigned char)c)
+			return (str + n - i - 1);
 	return (0);
 }

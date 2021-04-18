@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_isblank.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/14 23:20:24 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/17 22:02:22 by cmaginot         ###   ########.fr       */
+/*   Created: 2021/04/17 17:11:07 by cmaginot          #+#    #+#             */
+/*   Updated: 2021/04/17 17:24:20 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+int	ft_isblank(int c)
 {
-	unsigned int j;
-	unsigned int i;
-
-	i = -1;
-	if (needle[0] == '\0')
-		return ((char *)haystack);
-	while (haystack[++i] != '\0' && i < len)
-	{
-		j = 0;
-		while (needle[j] == haystack[i + j] && haystack[i + j] != '\0' &&
-			i + j < len)
-			if (needle[++j] == '\0')
-				return ((char *)haystack + i);
-	}
+	if (c == ' ' || c == '\t')
+		return (1);
 	return (0);
 }
