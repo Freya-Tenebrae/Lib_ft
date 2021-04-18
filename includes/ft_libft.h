@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 17:31:56 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/18 20:12:28 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/04/19 01:27:33 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ int							ft_isupper(int c);
 int							ft_islower(int c);
 int							ft_isblank(int c);
 int							ft_isspace(int c);
+int							ft_isnumber(int c);
 void						*ft_memrchr(const void *s, int c, size_t n);
 int							ft_strcmp(const char *s1, const char *s2);
 char						*ft_strncpy(char * dst, const char * src,
