@@ -6,12 +6,11 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 22:44:22 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/17 22:52:00 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/04/18 02:54:10 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_libft.h"
-#include <stdlib.h>
 
 char	*ft_strndup(const char *s1, size_t n)
 {

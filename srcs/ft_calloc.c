@@ -6,12 +6,11 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 23:20:24 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/17 22:42:15 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/04/18 02:53:27 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_libft.h"
-#include <stdlib.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {

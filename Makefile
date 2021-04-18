@@ -19,6 +19,10 @@ SRC=$(addprefix ${FOLDER}/, ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
 							ft_strlcpy.c ft_strlcat.c ft_strnstr.c ft_atoi.c \
 							ft_calloc.c ft_strdup.c\
 							\
+							ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c \
+							\
+							\
+							\
 							ft_swap.c ft_isupper.c ft_islower.c ft_isblank.c \
 							ft_isspace.c ft_memrchr.c ft_strcmp.c ft_strncpy.c \
 							ft_strcpy.c ft_strncat.c ft_strcat.c ft_strstr.c \
