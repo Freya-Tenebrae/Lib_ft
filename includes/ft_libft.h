@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 17:31:56 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/18 04:49:11 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/04/18 20:12:28 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,19 @@
 # include <stdlib.h>
 # include <unistd.h>
 /* ************************************************************************** */
-/*                              TYPEDEF & DEFINE                              */
+/*                                   DEFINE                                   */
 /* ************************************************************************** */
-typedef unsigned long int	size_t;
 # define 					MIN(x, y) ((x <= y) ? x : y)
 # define 					MAX(x, y) ((x >= y) ? x : y)
+/* ************************************************************************** */
+/*                                  TYPEDEF                                   */
+/* ************************************************************************** */
+typedef unsigned long int	size_t;
+typedef struct 				s_list
+{
+	void					*content;
+	struct s_list 			*next;
+}							t_list;
 /* ************************************************************************** */
 /*                                 FIRST PART                                 */
 /* ************************************************************************** */
@@ -63,11 +71,18 @@ char						*ft_substr(char const *s, unsigned int start,
 char						*ft_strjoin(char const *s1, char const *s2);
 char						*ft_strtrim(char const *s1, char const *set);
 char						**ft_split(char const *s, char c);
+char						*ft_itoa(int n);
+char 						*ft_strmapi(char const *s, 
+								char (*f)(unsigned int, char));
+void 						ft_putchar_fd(char c, int fd);
+void						ft_putstr_fd(char *s, int fd);
+void						ft_putendl_fd(char *s, int fd);
+void						ft_putnbr_fd(int n, int fd);
 /* ************************************************************************** */
-/*                                   BONUS                                    */
+/*                                 BONUS PART                                 */
 /* ************************************************************************** */
 /* ************************************************************************** */
-/*                                 PERSONNAL                                  */
+/*                               PERSONNAL PART                               */
 /* ************************************************************************** */
 void						ft_swap(void *a, void *b);
 int							ft_isupper(int c);
@@ -84,5 +99,8 @@ char						*ft_strcat(char *s1, const char *s2);
 char						*ft_strstr(const char *haystack, 
 								const char *needle);
 char						*ft_strndup(const char *s1, size_t n);
-
+void 						ft_putchar(char c);
+void						ft_putstr(char *s);
+void						ft_putendl(char *s);
+void						ft_putnbr(int n);
 #endif
