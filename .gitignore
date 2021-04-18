@@ -1,3 +1,4 @@
 a.out
 srcs/*.o
 libft.a
+main.c
