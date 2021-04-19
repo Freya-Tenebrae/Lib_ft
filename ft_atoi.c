@@ -6,13 +6,13 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 23:20:24 by freya             #+#    #+#             */
-/*   Updated: 2021/04/19 03:28:09 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/04/19 16:03:03 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
-int ft_setresult(size_t value, int sign, int i)
+static int	ft_setresult(size_t value, int sign, int i)
 {
 	if (i > 19 || value >= 9223372036854775808ULL)
 	{
@@ -24,7 +24,7 @@ int ft_setresult(size_t value, int sign, int i)
 	return (value * sign);
 }
 
-int	ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	int 	i;
 	int 	sign;

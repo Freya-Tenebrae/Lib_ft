@@ -6,11 +6,11 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/24 14:58:00 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/19 04:00:43 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/04/19 16:06:06 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 char		*ft_strjoin(char const *s1, char const *s2)
 {

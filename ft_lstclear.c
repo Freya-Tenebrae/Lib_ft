@@ -6,8 +6,8 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 02:15:56 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/19 02:20:58 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/04/19 16:03:57 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"

@@ -6,11 +6,11 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 16:24:03 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/19 02:23:19 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/04/19 16:06:15 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
