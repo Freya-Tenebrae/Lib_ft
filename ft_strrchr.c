@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 23:20:24 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/19 16:06:45 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/04/19 16:55:49 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	*ft_memrchr(const void *s, int c, size_t n)
 	str = (unsigned char *)s;
 	i = -1;
 	while (++i < n)
-		if(str[n - i - 1] == (unsigned char)c)
+		if (str[n - i - 1] == (unsigned char)c)
 			return (str + n - i - 1);
 	return (0);
 }

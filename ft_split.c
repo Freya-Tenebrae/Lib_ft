@@ -6,13 +6,13 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 14:27:03 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/19 16:05:28 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/04/19 16:52:58 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_nbstr(char const *s, char c)
+static int		ft_nbstr(char const *s, char c)
 {
 	int number;
 	int i;
@@ -31,18 +31,11 @@ static int	ft_nbstr(char const *s, char c)
 	return (number);
 }
 
-char		**ft_split(char const *s, char c)
+static char		**ft_splitting(char **strs, char const *s, char c, int strs_l)
 {
-	char	**strs;
-	int		strs_l;
 	int		i;
 	int		j;
 
-	if(s == 0)
-		return (0);
-	strs_l = ft_nbstr(s, c);
-	if (!(strs = (char **)malloc((strs_l + 1) * sizeof(char *))))
-		return (0);
 	i = 0;
 	while (i < strs_l)
 	{
@@ -59,5 +52,17 @@ char		**ft_split(char const *s, char c)
 		strs[i++][j] = 0;
 	}
 	strs[i] = 0;
-	return (strs);
+}
+
+char			**ft_split(char const *s, char c)
+{
+	char	**strs;
+	int		strs_l;
+
+	if (s == 0)
+		return (0);
+	strs_l = ft_nbstr(s, c);
+	if (!(strs = (char **)malloc((strs_l + 1) * sizeof(char *))))
+		return (0);
+	return (ft_splitting(strs, s, c, strs_l));
 }

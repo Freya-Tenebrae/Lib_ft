@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 23:20:24 by freya             #+#    #+#             */
-/*   Updated: 2021/04/19 16:03:03 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/04/19 16:40:36 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_setresult(size_t value, int sign, int i)
 {
-	if (i > 19 || value >= 9223372036854775808ULL)
+	if (i > 19 || value > 9223372036854775807)
 	{
 		if (sign == 1)
 			return (-1);
@@ -26,14 +26,14 @@ static int	ft_setresult(size_t value, int sign, int i)
 
 int			ft_atoi(const char *str)
 {
-	int 	i;
-	int 	sign;
+	int		i;
+	int		sign;
 	size_t	value;
 
 	i = 0;
 	sign = 1;
 	value = 0;
-	while (*str != '\0' && (*str == ' ' || *str == '\t' || *str == '\n' || 
+	while (*str != '\0' && (*str == ' ' || *str == '\t' || *str == '\n' ||
 		*str == '\v' || *str == '\f' || *str <= '\r'))
 		str++;
 	if (*str != '\0' && str[i] == '-')
@@ -50,6 +50,3 @@ int			ft_atoi(const char *str)
 	}
 	return (ft_setresult(value, sign, i));
 }
-
-/*	ULL at end of '9223372036854775808' is interpreted by the compilator by   */
-/*	transforming the value in unsigned long long 							  */

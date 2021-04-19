@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 23:20:24 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/19 16:04:49 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/04/19 16:47:14 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char	*str;
-	size_t 			i;
+	size_t			i;
 
 	if (dst == 0 && src == 0)
 		return (dst);

@@ -6,18 +6,18 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/24 14:58:00 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/19 16:06:06 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/04/19 16:54:36 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*res;
-	size_t	len;
-	unsigned int i;
-	unsigned int j;
+	char			*res;
+	size_t			len;
+	unsigned int	i;
+	unsigned int	j;
 
 	if (s1 == 0 || s2 == 0)
 		return (0);

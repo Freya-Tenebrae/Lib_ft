@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 23:20:24 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/19 16:06:21 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/04/19 16:55:05 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	while (s[++i] != '\0')
 		str[i] = f(i, s[i]);
 	str[i] = '\0';
-	return(str);
+	return (str);
 }

@@ -6,15 +6,15 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 02:15:21 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/19 16:06:59 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/04/19 16:56:56 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	ft_swap(void *a, void *b)
-{	
-	void *tmp; 
+{
+	void *tmp;
 
 	tmp = a;
 	a = b;
