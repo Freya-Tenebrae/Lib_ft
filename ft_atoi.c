@@ -1,0 +1,55 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/14 23:20:24 by freya             #+#    #+#             */
+/*   Updated: 2021/04/19 03:28:09 by cmaginot         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_libft.h"
+
+int ft_setresult(size_t value, int sign, int i)
+{
+	if (i > 19 || value >= 9223372036854775808ULL)
+	{
+		if (sign == 1)
+			return (-1);
+		else
+			return (0);
+	}
+	return (value * sign);
+}
+
+int	ft_atoi(const char *str)
+{
+	int 	i;
+	int 	sign;
+	size_t	value;
+
+	i = 0;
+	sign = 1;
+	value = 0;
+	while (*str != '\0' && (*str == ' ' || *str == '\t' || *str == '\n' || 
+		*str == '\v' || *str == '\f' || *str <= '\r'))
+		str++;
+	if (*str != '\0' && str[i] == '-')
+	{
+		sign *= -1;
+		str++;
+	}
+	else if (str[i] != '\0' && str[i] == '+')
+		i++;
+	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
+	{
+		value = value * 10 + (str[i] - '0');
+		i++;
+	}
+	return (ft_setresult(value, sign, i));
+}
+
+/*	ULL at end of '9223372036854775808' is interpreted by the compilator by   */
+/*	transforming the value in unsigned long long 							  */
