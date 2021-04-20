@@ -6,7 +6,7 @@
 #    By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/14 23:11:43 by cmaginot          #+#    #+#              #
-#    Updated: 2021/04/19 16:08:11 by cmaginot         ###   ########.fr        #
+#    Updated: 2021/04/19 17:07:44 by cmaginot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,16 @@ SRC=ft_memset.c \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
-	ft_putnbr_fd.c
+	ft_putnbr_fd.c \
+	ft_lstnew.c \
+	ft_lstadd_front.c \
+	ft_lstsize.c \
+	ft_lstlast.c \
+	ft_lstadd_back.c \
+	ft_lstdelone.c \
+	ft_lstclear.c \
+	ft_lstiter.c \
+	ft_lstmap.c
 SRC_BONUS=ft_swap_bonus.c \
 	ft_isnumber_bonus.c \
 	ft_isupper_bonus.c \

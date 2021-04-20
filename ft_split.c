@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 14:27:03 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/19 16:52:58 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/04/19 17:03:57 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ static char		**ft_splitting(char **strs, char const *s, char c, int strs_l)
 		strs[i++][j] = 0;
 	}
 	strs[i] = 0;
+	return (strs);
 }
 
 char			**ft_split(char const *s, char c)
