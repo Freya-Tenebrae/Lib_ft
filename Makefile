@@ -6,7 +6,7 @@
 #    By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/14 23:11:43 by cmaginot          #+#    #+#              #
-#    Updated: 2021/04/19 17:07:44 by cmaginot         ###   ########.fr        #
+#    Updated: 2021/04/21 03:25:47 by cmaginot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,19 +70,7 @@ SRC_BONUS=ft_swap_bonus.c \
 	ft_putchar_bonus.c \
 	ft_putstr_bonus.c \
 	ft_putendl_bonus.c \
-	ft_putnbr_bonus.c \
-	ft_atof_bonus.c \
-	ft_strtrimc_bonus.c \
-	ft_strnequ_bonus.c \
-	ft_strequ_bonus.c \
-	ft_strmap_bonus.c \
-	ft_striteri_bonus.c \
-	ft_striter_bonus.c \
-	ft_strclr_bonus.c \
-	ft_strdel_bonus.c \
-	ft_strnew_bonus.c \
-	ft_memdel_bonus.c \
-	ft_memalloc_bonus.c
+	ft_putnbr_bonus.c
 OBJS=${SRC:.c=.o}
 OBJS_BONUS=${SRC_BONUS:.c=.o}
 
