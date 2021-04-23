@@ -6,11 +6,11 @@
 #    By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/14 23:11:43 by cmaginot          #+#    #+#              #
-#    Updated: 2021/04/21 03:25:47 by cmaginot         ###   ########.fr        #
+#    Updated: 2021/04/24 00:36:06 by cmaginot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-TARGET=libft.a
+NAME=libft.a
 SRC=ft_memset.c \
 	ft_bzero.c \
 	ft_memcpy.c \
@@ -81,16 +81,16 @@ CC=gcc
 CFLAGS=-Wall -Wextra -Werror
 RM=rm -f
 
-all: ${TARGET}
+all: ${NAME}
 
-${TARGET}: ${OBJS}
-	ar -rcs ${TARGET} ${OBJS}
+${NAME}: ${OBJS}
+	ar -rcs ${NAME} ${OBJS}
 
 %.o: %.c
 	${CC} -c ${CFLAGS} -o $@ $< -I ${HEADER}
 
 bonus: ${OBJS} ${OBJS_BONUS}
-	ar -rcs ${TARGET} ${OBJS} ${OBJS_BONUS}
+	ar -rcs ${NAME} ${OBJS} ${OBJS_BONUS}
 
 clean:
 	${RM} ${OBJS} ${OBJS_BONUS}
