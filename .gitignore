@@ -3,3 +3,4 @@ a.out
 libft.a
 main.c
 .DS_Store
+libftTester/*
