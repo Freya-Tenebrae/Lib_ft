@@ -21,3 +21,7 @@ Test done on a `MacBook Air (M1, 2020)` under `macOS Big Sur Version 11.2.3`
 > [Libftest](https://github.com/jtoty/Libftest) by [jtoty](https://github.com/jtoty)
 
 ![results](https://github.com/Freya-Tenebrae/Libft/blob/main/results_Libftest.png)
+
+> [libftTester](https://github.com/Tripouille/libftTester) by [Tripouille](https://github.com/Tripouille)
+
+![results](https://github.com/Freya-Tenebrae/Libft/blob/main/results_libftTester.png)
