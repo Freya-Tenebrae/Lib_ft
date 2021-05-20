@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 02:15:56 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/04/20 22:23:23 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/05/20 11:25:01 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (lst != 0 || f != 0)
+	{
 		while (lst != 0)
 		{
 			f(lst->content);
 			lst = lst->next;
 		}
+	}
 }
