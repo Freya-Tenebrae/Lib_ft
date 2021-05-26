@@ -10,9 +10,9 @@ This Repositorie contains my solution to the project `libft` of 42 (Paris).
 
 ## Test
 
-Test effectuer sur un `MacBook Air (M1, 2020)` sous `macOS Big Sur Version 11.2.3`
+Test effectuer sur un `MacBook Air (M1, 2020)` sous `macOS Big Sur Version 11.2.3` et sur un `iMac (fin 2012)` sous `macOS Mokave Version 10.14.6`
 
-Test done on a `MacBook Air (M1, 2020)` under `macOS Big Sur Version 11.2.3`
+Test done on a `MacBook Air (M1, 2020)` under `macOS Big Sur Version 11.2.3` and on a `iMac (late 2012)` under `macOS Mokave Version 10.14.6`
 
 > [libft-unit-test](https://github.com/alelievr/libft-unit-test) by [alelievr](https://github.com/alelievr)
 
