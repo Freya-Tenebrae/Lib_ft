@@ -28,4 +28,4 @@ Test done on a `MacBook Air (M1, 2020)` under `macOS Big Sur Version 11.2.3` and
 
 ## Todo
 
-need to fix some memory leak, and maybe pass libft destructor
+need to fix some memory leak, and maybe pass libft destructor and war machinee
