@@ -10,9 +10,9 @@ This Repositorie contains my solution to the project `libft` of 42 (Paris).
 
 ## Test
 
-Test effectuer sur un `MacBook Air (M1, 2020)` sous `macOS Big Sur Version 11.2.3` et sur un `iMac (fin 2012)` sous `macOS Mokave Version 10.14.6`
+Test effectuer sur un `MacBook Air (M1, 2020)` sous `macOS Big Sur Version 11.2.3` et sur un `iMac (fin 2012)` sous `macOS Mojave Version 10.14.6`
 
-Test done on a `MacBook Air (M1, 2020)` under `macOS Big Sur Version 11.2.3` and on a `iMac (late 2012)` under `macOS Mokave Version 10.14.6`
+Test done on a `MacBook Air (M1, 2020)` under `macOS Big Sur Version 11.2.3` and on a `iMac (late 2012)` under `macOS Mojave Version 10.14.6`
 
 > [libft-unit-test](https://github.com/alelievr/libft-unit-test) by [alelievr](https://github.com/alelievr)
 
@@ -25,3 +25,7 @@ Test done on a `MacBook Air (M1, 2020)` under `macOS Big Sur Version 11.2.3` and
 > [libftTester](https://github.com/Tripouille/libftTester) by [Tripouille](https://github.com/Tripouille)
 
 ![results](https://github.com/Freya-Tenebrae/Libft/blob/main/results_libftTester.png)
+
+## Todo
+
+need to fix some memory leak, and maybe pass libft destructor
