@@ -6,11 +6,22 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 14:27:03 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/05/20 12:42:17 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/05/28 08:47:16 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	ft_freesplit(char ***strs, int i)
+{
+	while (--i >= 0)
+	{
+		free((*strs)[i]);
+		(*strs)[i] = NULL;
+	}
+	free(*strs);
+	*strs = NULL;
+}
 
 static int	ft_nbstr(char const *s, char c)
 {
@@ -46,7 +57,10 @@ static char	**ft_splitting(char **strs, char const *s, char c, int strs_l)
 			j++;
 		strs[i] = (char *)malloc(j + 1);
 		if (!strs[i])
+		{
+			ft_freesplit(&strs, i);
 			return (0);
+		}
 		j = 0;
 		while (*s != '\0' && *s != c)
 			strs[i][j++] = *s++;
