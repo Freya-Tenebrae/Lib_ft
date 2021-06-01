@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 02:15:56 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/05/28 08:53:46 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/06/01 11:53:15 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		newelem = ft_lstnew(f(lst->content));
 		if (!newelem)
-        {
-            ft_lstclear(&newlst, del);
+		{
+			ft_lstclear(&newlst, del);
 			return (NULL);
-        }
+		}
 		ft_lstadd_back(&newlst, newelem);
 		lst = lst->next;
 	}
