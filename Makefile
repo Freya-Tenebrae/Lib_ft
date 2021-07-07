@@ -54,7 +54,6 @@ SRC_BONUS=ft_lstnew.c \
 	ft_lstclear.c \
 	ft_lstiter.c \
 	ft_lstmap.c \
-	ft_swap_bonus.c \
 	ft_isnumber_bonus.c \
 	ft_isupper_bonus.c \
 	ft_islower_bonus.c \
