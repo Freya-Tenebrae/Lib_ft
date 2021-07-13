@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int	ft_setresult(size_t value, int sign, int i)
+static size_t	ft_setresult(size_t value, int sign, int i)
 {
 	if (i > 19 || value > 9223372036854775807)
 	{
@@ -24,7 +24,7 @@ static int	ft_setresult(size_t value, int sign, int i)
 	return (value * sign);
 }
 
-int	ft_atoi(const char *str)
+size_t	ft_atoi(const char *str)
 {
 	int		i;
 	int		sign;
