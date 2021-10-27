@@ -1,7 +1,5 @@
 # libft
 
-Ce dépôt contiens ma solution au projet `libft` de 42 (Paris).
-
 This Repositorie contains my solution to the project `libft` of 42 (Paris).
 
 [![jaeskim's 42 stats](https://badge42.herokuapp.com/api/stats/cmaginot?privacyName=true)](https://github.com/JaeSeoKim/badge42)
